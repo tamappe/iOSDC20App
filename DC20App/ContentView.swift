@@ -70,17 +70,7 @@ struct Home: View {
             LazyVGrid(
                 columns: Array(repeating: .init(.flexible()), count: 5),
                 content: {
-                    ForEach(list, id: \.self) { index in
-                        Button(action: {
-                            if counter.count == index {
-                                counter.increment()
-                            }
-                        }, label: {
-                            Text("\(index)")
-                                .frame(width: 60, height: 60)
-                        })
-                        .accentColor(Color.black)
-                    }
+                    buttons
                 })
             
             Button(action: {
